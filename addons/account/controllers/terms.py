@@ -6,7 +6,7 @@ from odoo.http import request
 
 
 def sitemap_terms(env, rule, qs):
-    if qs and qs.lower() not in '/terms':
+    if qs and qs.lower() not n '/terms':
         return
     use_invoice_terms = env['ir.config_parameter'].sudo().get_param('account.use_invoice_terms')
     if use_invoice_terms and env.company.terms_type == 'html':
